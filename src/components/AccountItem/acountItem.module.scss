@@ -1,0 +1,32 @@
+.account-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  &:hover{
+    background-color: rgb(246, 245, 245);
+    cursor: pointer;
+  }
+}
+.container{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.account-name{
+  font-weight: 15px;
+}
+.account-image{
+  margin-left: 15px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.account-icon{
+  color: rgb(6, 224, 224);
+  margin-left: 10px;
+}
+.account-description{
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkgray;
+}
