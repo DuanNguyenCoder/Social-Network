@@ -3,6 +3,11 @@ import {
   faCircleXmark,
   faMagnifyingGlass,
   faSpinner,
+  faPlus,
+  faEllipsisVertical,
+  faEarthAsia,
+  faCircleQuestion,
+  faKeyboard,
 } from "@fortawesome/free-solid-svg-icons";
 import { Wrapper as PopperWrapper } from "../../../../components/poper/index.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,10 +18,25 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import AccountItem from "../../../AccountItem";
 import Button from "../../../../components/button/index";
+import MenuItem from "../../../poper/menu/index.js";
 
 const cx = classNames.bind(style);
+const MENU_ITEM = [
+  {
+    icon: <FontAwesomeIcon icon={faEarthAsia} />,
+    title: "English",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+    title: "Feedback",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faKeyboard} />,
+    title: "Keyboard shotcuts",
+  },
+];
 const Header = () => {
-  const [searchResult, setSearchResult] = useState([1, 2, 3]);
+  const [searchResult, setSearchResult] = useState([]);
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -68,8 +88,16 @@ const Header = () => {
           </div>
         </Tippy>
         <div className={cx("action")}>
-          <Button>upload</Button>
-          <Button>login</Button>
+          <Button>
+            <FontAwesomeIcon icon={faPlus} /> upload
+          </Button>
+          <Button primary>login</Button>
+
+          <MenuItem item={MENU_ITEM}>
+            <button className={cx("menu-icon")}>
+              <FontAwesomeIcon size="lg" icon={faEllipsisVertical} />
+            </button>
+          </MenuItem>
         </div>
       </div>
     </div>

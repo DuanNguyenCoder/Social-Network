@@ -1,0 +1,18 @@
+.menu-items{
+  width: 200px;
+  height: 300px;
+}
+
+.option-btn{
+  width: 100%;
+  padding: 10px 8px 10px 16px;
+ font-family: var(--fontPrimary);
+  text-align: start;
+  display: block;
+  border: none;
+  background-color: transparent;
+  &:hover{
+    background-color: rgb(246, 245, 245);
+    cursor: pointer;
+  }
+}

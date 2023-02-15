@@ -92,7 +92,19 @@ width: 352px;
 
 .action{
  position: relative;
+ display: flex;
+ justify-content: space-between;
  left: 3%;
- width: 200px;
- background-color: antiquewhite;
+ width: 23%;
+ 
 }
+
+.menu-icon{
+  border: none;
+  padding: 8px;
+  background-color: transparent;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
